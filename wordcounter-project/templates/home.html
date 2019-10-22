@@ -1,0 +1,13 @@
+<h1>Welcome to WORDCOUNTER</h1>
+
+<!-- for will go to count page after we hit submit button -->
+
+<a href="{% url 'about' %}">About Page</button>
+<br>
+<br>
+<form action="{% url 'count' %}">
+  <textarea name="fulltext" rows="8" cols="50"></textarea>
+  <br>
+  <br>
+  <input type="submit" value="COUNT">
+</form>

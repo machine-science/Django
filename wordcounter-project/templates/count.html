@@ -1,0 +1,19 @@
+<h1>This is count page</h1>
+
+<a href="{% url 'homepage' %}"> Start Again</a>
+
+<h2>There are {{count}} words in the text you entered</h2>
+
+<h3>Original Text is : </h3>
+<h2> {{ fulltext }} </h2>
+
+<p>Each word: </p>
+<br>
+
+{% for i, j in sortedWords %}
+  <strong>
+    {{ i }} :
+  </strong>
+    {{ j }} <br>
+
+{% endfor %}
