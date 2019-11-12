@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+import jobs.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', jobs.views.home, name = "job_home"),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 # So this line says, hey... whenever you are adding static files, we want to have
 # media URL and media ROOt. In short, this is where you look for the information
